@@ -1,0 +1,72 @@
+---
+import '../styles/style.css';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import CookieBanner from '../components/CookieBanner.astro';
+
+const { 
+    title = "Glen Lambe Coaching - Personal Training in Dublin", 
+    description = "Achieve your fitness goals with Glen Lambe Coaching. Personalised tailored programs, diet plans, and mindset coaching based in Dublin.", 
+    keywords = "fitness, dublin, personal trainer, coaching, diet plan, glen lambe",
+    canonical = "https://glenlambecoaching.ie/", 
+    ogTitle = "Glen Lambe Coaching", 
+    ogDescription = "Get the body you want with 24/7 support and custom programs.", 
+    ogUrl = "https://glenlambecoaching.ie/", 
+    ogImage = "/assets/images/logo.png"
+} = Astro.props;
+---
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {keywords && <meta name="keywords" content={keywords} />}
+    {canonical && <link rel="canonical" href={canonical} />}
+    
+    <link rel="icon" href="/assets/images/logo.png" type="image/png">
+    
+    <meta property="og:title" content={ogTitle} />
+    <meta property="og:description" content={ogDescription} />
+    <meta property="og:image" content={ogImage} />
+    {ogUrl && <meta property="og:url" content={ogUrl} />}
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <slot name="head" />
+</head>
+<body>
+    <Navbar />
+    
+    <slot />
+    
+    <Footer />
+    <CookieBanner />
+    
+    <script is:inline>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggle = document.querySelector('.menu-toggle');
+            const links = document.querySelector('.nav-links');
+            
+            if(toggle && links) {
+                // Przełączanie menu przyciskiem hamburgera
+                toggle.addEventListener('click', () => {
+                    links.classList.toggle('active');
+                });
+
+                // Zamknięcie menu po kliknięciu w dowolny odnośnik w nawigacji
+                const navAnchors = links.querySelectorAll('a');
+                navAnchors.forEach(anchor => {
+                    anchor.addEventListener('click', () => {
+                        links.classList.remove('active');
+                    });
+                });
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Online Personal Trainer" description="Achieve your fitness goals with Glen Lambe Coaching. Personalised tailored programs, diet plans, and mindset coaching based in Dublin.">
+  <header id="hero" class="hero-section">
+        <div class="container hero-flex-container">
+            <div class="hero-text-column">
+                <h1>Build your best physique and feel confident in your skin!</h1>
+                <h2>Diet and training should work for YOU, not the other way around. I'll teach you how to eat and train normally while achieving serious results. Step by step.</h2>
+                
+                <div class="social-proof">
+                    <p>Trusted by over<br><span>2,400 clients!</span></p>
+                </div>
+            </div>
+            
+            <div class="hero-image-column">
+                <img src="/assets/images/hero-glen.jpg" alt="Glen Lambe Personal Trainer" loading="lazy" class="hero-image-masked">
+                <a href="/apply#form" class="btn hero-btn">Start Your Journey NOW!</a>
+            </div>
+        </div>
+    </header>
+
+  <!-- Programs / Benefits -->
+  <section id="programs" class="py-5 border-top" style="background-color: var(--dark); border-color: #222 !important;">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold text-white">One decision. Complete support.</h2>
+      </div>
+      
+      <div class="oferta-grid">
+        <div class="benefit-card">
+            <div class="benefit-icon-wrapper"><i class="bi bi-person-bounding-box benefit-icon"></i></div>
+            <h4 class="text-white">Custom training plan</h4>
+            <p class="text-muted mb-0">Built for your gym, your experience and the days you can actually train. Video demos on every lift.</p>
+        </div>
+        
+        <div class="benefit-card">
+            <div class="benefit-icon-wrapper"><i class="bi bi-egg-fried benefit-icon"></i></div>
+            <h4 class="text-white">Flexible nutrition</h4>
+            <p class="text-muted mb-0">Targets that fit your life, not a meal plan you'll hate by Thursday. Meals out and chocolate included.</p>
+        </div>
+        
+        <div class="benefit-card">
+            <div class="benefit-icon-wrapper"><i class="bi bi-whatsapp benefit-icon"></i></div>
+            <h4 class="text-white">Unlimited support</h4>
+            <p class="text-muted mb-0">Direct WhatsApp access. Bad day, big meal out, holiday coming up: message me and we sort it.</p>
+        </div>
+        
+        <div class="benefit-card">
+            <div class="benefit-icon-wrapper"><i class="bi bi-brain benefit-icon"></i></div>
+            <h4 class="text-white">Mindset coaching</h4>
+            <p class="text-muted mb-0">The bit everyone skips. We work on the habits, the self-talk and the all-or-nothing thinking.</p>
+        </div>
+
+        <div class="benefit-card">
+            <div class="benefit-icon-wrapper"><i class="bi bi-speedometer2 benefit-icon"></i></div>
+            <h4 class="text-white">Weight Loss Control</h4>
+            <p class="text-muted mb-0">Sustainable fat loss without the dreaded yo-yo effect. Learn to manage your weight and keep the results for good.</p>
+        </div>
+
+        <div class="benefit-card">
+            <div class="benefit-icon-wrapper"><i class="bi bi-sun benefit-icon"></i></div>
+            <h4 class="text-white">Beach Physique Rescue</h4>
+            <p class="text-muted mb-0">Got a holiday deadline? A structured, high-impact blueprint designed to get you lean and confident just in time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="py-5 border-top border-bottom" style="background-color: var(--light); border-color: #222 !important;">
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-lg-10">
+                  <div class="text-center mb-4">
+                      <h2 class="fw-bold text-white">Who am I? <span style="color: var(--neon-green);"></span></h2>
+                  </div>
+                  <div class="text-muted fs-5" style="line-height: 1.8;">
+                      <p>As a leading <strong>online personal trainer and fat loss expert based in Dublin</strong>, I've spent the last several years helping everyday people achieve extraordinary results. Over <strong>2,400 clients</strong> have trusted my methods to completely transform their bodies and mindsets.</p>
+                      
+                      <p>My mission is simple: to prove that you don't need to live in the gym or starve yourself to build muscle and drop stubborn body fat. I specialize in crafting <strong>sustainable weight loss programs</strong> and tailored muscle-building plans that actually fit into your busy lifestyle.</p>
+                      
+                      <p><strong>Why is working with me worth the investment?</strong> Because I eliminate the guesswork. You aren't just getting a generic PDF template. You are getting a dedicated coach, science-backed nutrition strategies, and daily accountability. I take care of the programming, so all you have to do is execute. If you want guaranteed results and a physique you can be proud of, you're in the right place.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Testimonials Vlog -->
+  <section id="testimonials" class="py-5">
+    <div class="container text-center">
+      <h2 class="fw-bold text-white mb-4">Listen to my clients' stories <span style="color: var(--neon-green);">#ClientTestimonial</span></h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-8">
+          <div style="background: var(--light); border-radius: 12px; border: 1px solid #333; overflow: hidden; box-shadow: var(--shadow);">
+             <video 
+                id="testimonialVideo"
+                src="/assets/videos/testimonial.mp4" 
+                controls 
+                playsinline
+                webkit-playsinline
+                preload="metadata" 
+                style="width: 100%; display: block;"
+             >
+                Your browser does not support the video tag.
+             </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transformations Slider -->
+  <section id="transformations" class="py-5" style="background-color: var(--dark);">
+    <div class="container text-center">
+      <h2 class="fw-bold text-white mb-5">Here are some of our amazing transformations. You could be next!</h2>
+      
+      <div id="transformationsCarousel" class="carousel slide col-lg-8 mx-auto shadow-lg" data-bs-ride="carousel">
+        <div class="carousel-inner rounded-4" style="border: 2px solid var(--neon-green);">
+          <div class="carousel-item active">
+            <div class="carousel-image-wrapper">
+                <img src="/assets/images/transformation-1.jpg" alt="Client Transformation Before and After 1" loading="lazy">
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-image-wrapper">
+                <img src="/assets/images/transformation-2.jpg" alt="Client Transformation Before and After 2" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#transformationsCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#transformationsCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="py-5 text-center">
+    <div class="container">
+      <h2 class="fw-bold text-white mb-4">Ready to become the best version of yourself?</h2>
+      <p class="text-muted mb-4">Fill out a quick form, and I'll prepare a custom action plan for you.</p>
+      <a href="/apply#form" class="btn btn-neon btn-lg px-5 py-3 fs-5">Complete the Form & Let's Start</a>
+    </div>
+  </section>
+
+  <!-- Skrypt automatycznego odtwarzania wideo po najechaniu wierszem wzroku -->
+  <script is:inline>
+      document.addEventListener('DOMContentLoaded', () => {
+          const video = document.getElementById('testimonialVideo');
+          if (video) {
+              const observer = new IntersectionObserver((entries) => {
+                  entries.forEach(entry => {
+                      if (entry.isIntersecting) {
+                          video.play().catch(() => {});
+                      } else {
+                          video.pause();
+                      }
+                  });
+              }, { threshold: 0.5 });
+              
+              observer.observe(video);
+          }
+      });
+  </script>
+</BaseLayout>

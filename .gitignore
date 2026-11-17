@@ -1,0 +1,16 @@
+# Wykluczenie folderów budowania i zależności
+node_modules/
+dist/
+.astro/
+
+# Pliki środowiskowe i dzienniki
+.env
+.env.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Pliki systemowe
+.DS_Store
+Thumbs.db
+*.mp4
