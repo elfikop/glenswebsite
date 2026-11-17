@@ -13,4 +13,3 @@ yarn-error.log*
 # Pliki systemowe
 .DS_Store
 Thumbs.db
-*.mp4
